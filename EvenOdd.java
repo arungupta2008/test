@@ -1,20 +1,23 @@
-package snippet;
-
-
 import java.util.Scanner;
  
-class EvenOdd
-{
+class EvenOdd{
   public static void main(String args[])
   {
-    int c;
-    System.out.println("Input an integer");
+    int input;
+    System.out.print("Input an integer: ");
     Scanner in = new Scanner(System.in);
-    c = in.nextInt();
- 
-    if ( (c/2)*2 == c )
+	try{
+		input = in.nextInt();
+		if ( (input/2)*2 == input )
       System.out.println("Even");
     else
       System.out.println("Odd");
+
+	}catch(Exception e){
+	
+		System.out.println("Please enter valid input");
+
+	}	
+ 
   }
 }
